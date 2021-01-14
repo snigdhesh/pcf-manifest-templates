@@ -1,0 +1,10 @@
+---
+applications:
+- name: sample-app-dev
+  memory: 128M
+  instances: 1
+  host: sample-app-dev
+  domain: cfapps.io
+  path: target\application-name-0.0.1.SNAPSHOT.jar
+  command: set DEBUG=helloworld:* & npm run startdev
+  buildpack: https://github.com/cloudfoundry/java-buildpack

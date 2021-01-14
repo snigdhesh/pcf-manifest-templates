@@ -1,0 +1,10 @@
+---
+applications:
+- name: sample-node-app-dev
+  memory: 128M
+  instances: 1
+  host: sample-node-app-dev
+  domain: cfapps.io
+  #path: .
+  command: set DEBUG=helloworld:* & npm run startdev
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack
